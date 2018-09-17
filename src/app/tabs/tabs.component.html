@@ -1,0 +1,12 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item" [ngClass]="{active: side === 'all'}">
+    <a class="nav-link" href="#" (click)="onTab('all')">All</a>
+  </li>
+  <li class="nav-item" [ngClass]="{active: side === 'light'}">
+    <a class="nav-link" href="#" (click)="onTab('light')">Light</a>
+  </li>
+  <li class="nav-item" [ngClass]="{active: side === 'dark'}">
+    <a class="nav-link" href="#" (click)="onTab('dark')">Dark</a>
+  </li>
+</ul>
+<app-list [characters]="getCharacters()"></app-list>
