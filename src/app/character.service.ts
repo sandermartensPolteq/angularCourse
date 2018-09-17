@@ -29,4 +29,9 @@ export class CharacterService {
       }
     });
   }
+
+  addCharacter(name, side){
+    const newChar = {name: name, side: side};
+    this.characters.push(newChar);
+  }
 }
