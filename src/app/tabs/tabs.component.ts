@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CharacterService } from '../character.service';
 
 @Component({
   selector: 'app-tabs',
@@ -8,26 +7,8 @@ import { CharacterService } from '../character.service';
 })
 export class TabsComponent implements OnInit {
 
-  side = 'all';
-  characters = [];
-  charService: CharacterService;
+  constructor() {}
 
-  constructor( cs: CharacterService) {
-    this.charService = cs;
-  }
-
-  ngOnInit() {
-  }
-
-  onTab(side){
-    this.side = side;
-  }
-
-  getCharacters(){
-    this.characters = this.charService.getCharacters(this.side);
-    return this.characters;
-  }
-
-
+  ngOnInit() {}
 
 }

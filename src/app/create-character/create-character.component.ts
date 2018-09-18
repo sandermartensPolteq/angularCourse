@@ -27,8 +27,7 @@ export class CreateCharacterComponent implements OnInit {
     if(submittedForm.invalid){
       return;
     }
-    //this.service.addCharacter(submittedForm.value.name, submittedForm.value.side);
-    console.log(submittedForm);
+    this.service.addCharacter(submittedForm.value.name, submittedForm.value.side);
   }
 
 }
